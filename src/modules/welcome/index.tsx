@@ -1,3 +1,11 @@
+/*
+ * @Description: description
+ * @Version: 2.0
+ * @Autor: liushuhao
+ * @Date: 2023-11-18 20:26:49
+ * @LastEditors: liushuhao
+ * @LastEditTime: 2023-12-10 21:15:15
+ */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect} from 'react';
 import {View, Image, StyleSheet} from 'react-native';
@@ -27,13 +35,7 @@ export default () => {
   };
 
   const startLogin = async () => {
-    console.log(222222);
-    const cacheUserInfo = await load('userInfo');
-    if (cacheUserInfo && JSON.parse(cacheUserInfo)) {
-      startHome();
-    } else {
-      startLogin();
-    }
+    navigation.replace('Login');
   };
 
   const startHome = () => {
